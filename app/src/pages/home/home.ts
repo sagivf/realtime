@@ -15,9 +15,14 @@ import {ArticleProvider} from "../../providers/article/article";
 })
 export class HomePage {
 
-  data$: any;
+  data = [];
+  //data$: any;
 
   constructor(private articleProvider: ArticleProvider) {
-    this.data$ = articleProvider.data$;
+    articleProvider.getMessages().subscribe(message => {
+      this.data.unshift(message);
+    })
+
+    //this.data$ = articleProvider.data$;
   }
 }

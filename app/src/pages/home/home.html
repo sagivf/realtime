@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  <div [@fadeIn]="''" *ngFor="let article of data$ | async">
+  <div [@fadeIn]="''" *ngFor="let article of data">
     <ion-card>
       <img [src]="article.image"/>
       <ion-card-content>
