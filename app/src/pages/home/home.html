@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div [@fadeIn]="''" *ngFor="let article of data$ | async">
+    <ion-card>
+      <img [src]="article.image"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{article.title}}
+        </ion-card-title>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
